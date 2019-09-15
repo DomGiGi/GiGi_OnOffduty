@@ -14,3 +14,16 @@ Para tudo funcionar em condicoes nessesitam do Mystic Notifications e da progres
 
 Espero que gostem ;) !
 
+Very simple script for entering and leaving service.
+
+gives an active employee card when entering the service and withdraws when you leave
+
+Contains animation and Progressbar.
+
+It's made for the Ambulance job, Police Job, Mechanic Job.
+
+You can add more Jobs if you want.
+
+For everything to work under conditions of Mystic Notifications and progressbar.
+
+Hope you like it ;) !
