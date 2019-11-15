@@ -1,6 +1,3 @@
-local Keys = {["E"] = 38,
-}
-
 ESX = nil            
 local PlayerData = {}
 
@@ -29,7 +26,7 @@ Citizen.CreateThread(function ()
       local playerPed = GetPlayerPed(-1)
         if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), 440.57,-975.68,30.00, true) <= 3.0 then
         DrawText3Ds(440.57,-975.68,30.00 + 0.5, "[~g~E~w~] Entrar / Sair Servico")
-        if IsControlJustReleased(0, Keys['E']) then
+        if IsControlJustReleased(0, 38) then
         RequestAnimDict("missah_2_ext_altleadinout")
         while not HasAnimDictLoaded("missah_2_ext_altleadinout") do
         Citizen.Wait(0)
@@ -41,7 +38,7 @@ Citizen.CreateThread(function ()
             Citizen.Wait(2200)
             ClearPedTasksImmediately(playerPed)
              else 
-              exports['mythic_notify']:DoHudText('error', 'Nao es um Policial.')
+              exports['mythic_notify']:DoHudText('error', 'Nao es um Policia.')
               ClearPedTasksImmediately(playerPed)
             end
           end
@@ -49,14 +46,14 @@ Citizen.CreateThread(function ()
       end
     end)
 
-  --Ambulance
+ --Ambulance
   Citizen.CreateThread(function ()
     while true do
       Citizen.Wait(0)
         local playerPed = GetPlayerPed(-1)
           if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), 340.05,-582.18, 28.20, true) <= 3.0 then
           DrawText3Ds(340.05,-582.18, 28.20 + 0.5, "[~g~E~w~] Entrar / Sair Servico")
-          if IsControlJustReleased(0, Keys['E']) then
+          if IsControlJustReleased(0, 38) then
           RequestAnimDict("missah_2_ext_altleadinout")
           while not HasAnimDictLoaded("missah_2_ext_altleadinout") do
           Citizen.Wait(0)
@@ -83,7 +80,7 @@ Citizen.CreateThread(function ()
           local playerPed = GetPlayerPed(-1)
             if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), -206.76,-1341.61,34.50, true) <= 3.0 then
             DrawText3Ds(-206.76,-1341.61,34.50 + 0.5, "[~g~E~w~] Entrar / Sair Servico")
-            if IsControlJustReleased(0, Keys['E']) then
+            if IsControlJustReleased(0, 38) then
                 if PlayerData.job.name == 'mechanic' then
                 TriggerServerEvent('cartao:daritem')
                 exports['progressBars']:startUI(2200, "Registar...")
